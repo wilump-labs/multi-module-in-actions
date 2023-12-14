@@ -5,6 +5,7 @@ spring:
     name: core-api
   config:
     import:
+      - logging.yml
   web:
     resources:
       add-mappings: false
