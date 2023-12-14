@@ -2,6 +2,7 @@ rootProject.name = "multi"
 
 include(
     "core:core-api",
+    "storage:db-core",
     "support:logging",
     "support:monitoring",
 )

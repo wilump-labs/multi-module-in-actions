@@ -7,6 +7,7 @@ spring:
     import:
       - logging.yml
       - monitoring.yml
+      - db-core.yml
   web:
     resources:
       add-mappings: false
