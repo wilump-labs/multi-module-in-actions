@@ -2,7 +2,7 @@ spring:
   profiles:
     active: local
   application:
-    name: multi-module-api
+    name: core-api
   config:
     import:
   web:
