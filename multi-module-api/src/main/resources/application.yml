@@ -1,0 +1,37 @@
+spring:
+  profiles:
+    active: local
+  application:
+    name: multi-module-api
+  config:
+    import:
+  web:
+    resources:
+      add-mappings: false
+
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+
+
+---
+spring:
+  config:
+    activate:
+      on-profile: local-dev
+
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod

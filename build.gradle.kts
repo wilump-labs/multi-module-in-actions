@@ -1,20 +1,22 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-	kotlin("jvm") version "1.9.20"
-	kotlin("plugin.spring") version "1.9.20" apply false
-	kotlin("plugin.jpa") version "1.9.20" apply false
-	id("org.springframework.boot") version "3.2.0" apply false
-	id("io.spring.dependency-management") version "1.1.4" apply false
+	kotlin("jvm")
+	kotlin("plugin.spring") apply false
+	kotlin("plugin.jpa") apply false
+	id("org.springframework.boot") apply false
+	id("io.spring.dependency-management") apply false
 }
 
 java {
 	sourceCompatibility = JavaVersion.VERSION_17
 }
 
+val projectGroup: String by project
+val applicationVersion: String by project
 allprojects {
-	group = "com.example"
-	version = "0.0.1-SNAPSHOT"
+	group = projectGroup
+	version = applicationVersion
 
 	repositories {
 		mavenCentral()
@@ -53,6 +55,4 @@ subprojects {
 	tasks.withType<Test> {
 		useJUnitPlatform()
 	}
-
 }
-
