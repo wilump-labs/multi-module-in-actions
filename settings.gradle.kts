@@ -4,6 +4,7 @@ include(
     "core:core-api",
     "domain",
     "storage:db-core",
+    "support:aws",
     "support:logging",
     "support:monitoring",
 )
